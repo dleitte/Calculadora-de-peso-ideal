@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main() {
+    float altura;
+    char sexo[9];
+    
+    printf("Insira sua altura: ");
+    scanf("%f", &altura);
+    system("cls");
+    
+    printf("Insira seu sexo, masculino ou feminino: ");
+    scanf("%s", sexo);
+    
+    if(strcmp(sexo, "feminino")== 0) {
+        float idhf = (62.1 * altura) - 44.7;
+        
+        printf("Seu índice de massa corporal = %.2f\n", idhf);
+    } else if(strcmp(sexo, "masculino")== 0) {
+        float idhm = (72.7 * altura) - 58;
+        
+        printf("Seu índice de massa corporal = %.2f\n", idhm);
+    } else {
+        printf("Sexo nao existente. \n");
+    }
+    
+    return 0;
+}
